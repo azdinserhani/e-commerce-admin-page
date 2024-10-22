@@ -1,0 +1,50 @@
+@import "../../App.scss";
+@include themify($themes) {
+.userList {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  .header{
+    .search{
+    height: 50px;
+    width: 500px;
+    background-color: #008080;
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+    align-self: flex-end;
+    
+    input{
+        height: 100%;
+        flex: 4;
+        border: none;
+        outline: none;
+        padding-left: 20px;
+        font-size: 20px;
+        border: #0080801c 1px solid;
+        background-color: themed("bg");
+      color: themed("textColorSecond");
+      border-color: themed("border");
+        &:focus{
+            border: #008080 1px solid;
+            
+        }
+    }
+    button{
+        flex: 0.5;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+        transition: 0.4s all ease;
+        &:hover{
+            scale: 1.2;
+            flex: 1;
+        }
+    }
+  }
+  }
+}
+}

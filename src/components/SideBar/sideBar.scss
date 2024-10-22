@@ -1,0 +1,40 @@
+@import "../../App.scss";
+@include themify($themes) {
+  .sidebar {
+    margin-top: 50px;
+    height: calc(100vh - 50px);
+    border: none;
+    .ps-sidebar-container {
+      background-color: themed("bgPrimary") !important;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      color: themed("textColor");
+      align-items: center;
+      cursor: pointer;
+    }
+    .icon {
+      cursor: pointer;
+      padding-left: 20px;
+      text-align: center;
+      color: themed("textColor");
+    }
+    .menu {
+      color: themed("textColor");
+
+      .ps-menu-button {
+        background-color: themed("bgPrimary") !important;
+        &:hover {
+          background-color: themed("bgSoft") !important;
+          color: themed("textColorSoft") !important;
+        }
+      }
+    }
+    .logOut {
+      position: absolute;
+      bottom: 10px;
+    }
+  }
+}

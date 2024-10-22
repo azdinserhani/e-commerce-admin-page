@@ -1,0 +1,116 @@
+@import "../../App.scss";
+@include themify($themes) {
+.order {
+  display: flex;
+
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px;
+  gap: 20px;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .tittle {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      p {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        span {
+          cursor: pointer;
+          color: #008080;
+        }
+      }
+    }
+  }
+  .search {
+    height: 50px;
+    width: 500px;
+    background-color: #008080;
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+    align-self: flex-end;
+    input {
+      height: 100%;
+      flex: 4;
+      border: none;
+      outline: none;
+      padding-left: 20px;
+      font-size: 20px;
+      border: #0080801c 1px solid;
+      background-color: themed("bg");
+      color: themed("textColorSecond");
+      border-color: themed("border");
+      &:focus {
+        border: #008080 1px solid;
+      }
+    }
+    button {
+      flex: 0.5;
+      outline: none;
+      border: none;
+      background-color: transparent;
+      color: white;
+      cursor: pointer;
+      transition: 0.4s all ease;
+      &:hover {
+        scale: 1.2;
+        flex: 1;
+      }
+    }
+  }
+  .dataGrid {
+    background-color: #ffffff;
+    border-radius: 19px;
+    min-width: 500px;
+    flex: 1;
+    box-shadow: 6px 6px 5px -6px rgba(0, 0, 0, 0.37);
+    -webkit-box-shadow: 6px 6px 5px -6px rgba(0, 0, 0, 0.37);
+    -moz-box-shadow: 6px 6px 5px -6px rgba(0, 0, 0, 0.37);
+  }
+  .action {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    .selectAction {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #008080;
+      padding: 10px;
+      outline: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .productListEdit {
+      background-color: #008080;
+      padding: 10px;
+      color: #ffffff;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      border-radius: 5px;
+      &:hover {
+        background-color: #014d4d;
+      }
+    }
+    .productListDelete {
+      color: red;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    select {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+}

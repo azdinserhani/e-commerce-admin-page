@@ -1,0 +1,27 @@
+@import "../../App.scss";
+@include themify($themes) {
+
+.userCharts {
+  background-color: themed("bg");
+  
+  border-radius: 19px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 50px;
+  margin: 20px;
+  box-shadow: 6px 6px 5px -6px rgba(0, 0, 0, 0.37);
+  -webkit-box-shadow: 6px 6px 5px -6px rgba(0, 0, 0, 0.37);
+  -moz-box-shadow: 6px 6px 5px -6px rgba(0, 0, 0, 0.37);
+  width: fit-content;
+  width: 100%;
+  
+  
+  .head {
+    h3 {
+      font-size: 25px;
+      color: themed("textColor");
+    }
+  }
+}
+}

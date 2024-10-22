@@ -1,0 +1,38 @@
+.product {
+  display: flex;
+  flex-direction: column;
+
+  gap: 50px;
+  margin: 50px;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .tittle {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        p{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            span{
+                cursor: pointer;
+                color: #008080;
+            }
+        }
+    }
+    .add {
+      background-color: #008080;
+      padding: 10px;
+      color: #ffffff;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      border-radius: 5px;
+      &:hover {
+        background-color: #014d4d;
+      }
+    }
+  }
+}

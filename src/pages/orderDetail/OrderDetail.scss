@@ -1,0 +1,124 @@
+@import "../../App.scss";
+@include themify($themes) {
+  .order {
+    display: flex;
+
+    justify-content: center;
+    flex-direction: column;
+    margin: 50px;
+    .mainContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .generalInfo,
+      .priceInfo,
+      .bottom {
+        background-color: themed("bg");
+        border-radius: 19px;
+        min-width: 500px;
+        flex: 1;
+        box-shadow: 6px 6px 5px -6px rgba(0, 0, 0, 0.37);
+        -webkit-box-shadow: 6px 6px 5px -6px rgba(0, 0, 0, 0.37);
+        -moz-box-shadow: 6px 6px 5px -6px rgba(0, 0, 0, 0.37);
+      }
+      .top {
+        display: flex;
+        gap: 20px;
+        .generalInfo {
+          flex: 3;
+          padding: 20px;
+          font-size: 17px;
+          .statusInfo {
+            display: flex;
+            justify-content: space-between;
+            p {
+              font-weight: 600;
+              color: themed("textColorSecond");
+              span {
+                color: #008080;
+              }
+            }
+            .status {
+              background-color: #05b171;
+              color: white;
+              border-radius: 5px;
+              padding: 5px;
+            }
+          }
+          .userInfo {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            .infoItem {
+              display: flex;
+              flex-direction: column;
+              gap: 15px;
+              color: themed("textColorSecond");
+            }
+          }
+        }
+        .priceInfo {
+          flex: 1;
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          color: themed("textColorSecond");
+
+          p {
+            margin-left: 20px;
+            font-weight: 600;
+            font-size: 17px;
+            color: themed("textColorSecond");
+
+            span {
+              color: #008080;
+            }
+          }
+        }
+      }
+      .bottom {
+        padding: 20px;
+        // width: 50%;
+        color: themed("textColorSecond");
+
+        .orderItem {
+          .cart-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            border-collapse: collapse;
+
+            .cart-header {
+              display: flex;
+              align-items: center;
+              font-weight: bold;
+              padding: 10px;
+              border-bottom: 2px solid #ccc;
+              color: themed("textColorSecond");
+
+              div {
+                flex: 1;
+              }
+            }
+            .cart-item {
+              display: flex;
+              align-items: center;
+              padding: 10px;
+              border: 1px solid #008080;
+              margin-top: 10px;
+              border-radius: 5px;
+              div {
+                flex: 1;
+                font-weight: 500;
+              }
+              img {
+                height: 50px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

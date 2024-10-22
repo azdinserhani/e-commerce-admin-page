@@ -1,0 +1,54 @@
+@import "../../App.scss";
+@include themify($themes) {
+  .dashBoardCard {
+    background-color: themed("bg");
+    border-radius: 19px;
+    height: 215px;
+    min-width: 500px;
+    flex: 1;
+    box-shadow: 6px 6px 5px -6px rgba(0, 0, 0, 0.37);
+    -webkit-box-shadow: 6px 6px 5px -6px rgba(0, 0, 0, 0.37);
+    -moz-box-shadow: 6px 6px 5px -6px rgba(0, 0, 0, 0.37);
+    overflow: hidden;
+    .topCard {
+      display: flex;
+      height: calc(215px - 55px);
+      justify-content: space-between;
+      padding: 20px;
+      .icon {
+        height: 90px;
+        width: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 21px;
+        background-color: rgba(0, 128, 128, 0.35);
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 90px;
+        p {
+          font-size: 25px;
+          color: #008080;
+        }
+        span {
+          font-size: 30px;
+          color: themed("textColorSecond");
+        }
+      }
+    }
+    .bottom {
+      background-color: #008080;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+      p {
+        color: #ffffff;
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@import "../../App.scss";
+@include themify($themes) {
+.dashBoard {
+  padding: 20px;
+  margin: 50px;
+  .top {
+    
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .productChart {
+    display: flex;
+    margin-top: 50px;
+    gap: 20px;
+    .barChart {
+      background-color: themed("bg");
+      
+      border-radius: 19px;
+      display: flex;
+      flex-direction: column;
+      flex: 3;
+      gap: 20px;
+      padding: 10px;
+      box-shadow: 6px 6px 5px -6px rgba(0, 0, 0, 0.37);
+      -webkit-box-shadow: 6px 6px 5px -6px rgba(0, 0, 0, 0.37);
+      -moz-box-shadow: 6px 6px 5px -6px rgba(0, 0, 0, 0.37);
+    }
+  }
+}
+}

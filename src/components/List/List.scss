@@ -1,0 +1,91 @@
+@import "../../App.scss";
+@include themify($themes) {
+  .productList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .css-1ckiqgw-MuiDataGrid-root .MuiDataGrid-filler {
+      background-color: themed("bg");
+      width: 0%;
+    }
+    .dataGrid {
+      background-color: themed("bg");
+
+      color: themed("textColorSecond");
+      border-radius: 19px;
+      min-width: 500px;
+      flex: 1;
+      box-shadow: 6px 6px 5px -6px rgba(0, 0, 0, 0.37);
+      -webkit-box-shadow: 6px 6px 5px -6px rgba(0, 0, 0, 0.37);
+      -moz-box-shadow: 6px 6px 5px -6px rgba(0, 0, 0, 0.37);
+
+      .MuiDataGrid-columnHeader {
+        padding: 0px;
+      }
+      .MuiDataGrid-columnHeaderTitleContainer {
+        color: themed("textColorSecond");
+        background-color: themed("bg");
+        padding: 10px;
+      }
+      .MuiDataGrid-footerContainer {
+        p {
+          color: themed("textColorSecond");
+        }
+        .MuiTablePagination-actions {
+          color: themed("textColorSecond");
+        }
+      }
+    }
+    .productListItem {
+      display: flex;
+      align-items: center;
+      .productListImg {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 10px;
+      }
+    }
+
+    .action {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      select{
+        background-color: themed("bgSoft");
+        color: themed("textColorSecond");
+        cursor: pointer;
+        border-color: themed("border");
+      }
+      .productListEdit {
+        background-color: #008080;
+        padding: 10px;
+        color: #ffffff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 5px;
+        &:hover {
+          background-color: #014d4d;
+        }
+      }
+      .productListDelete {
+        color: red;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+    }
+    .role {
+      p {
+        font-size: 18px;
+        color: red;
+      }
+      .admin {
+        color: #008080;
+      }
+    }
+  }
+}

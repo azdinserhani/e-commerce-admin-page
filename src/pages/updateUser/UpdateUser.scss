@@ -1,0 +1,75 @@
+@import "../../App.scss";
+@include themify($themes) {
+.updateUser {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  .mainContainer {
+    background-color:  themed("bg");
+    border-radius: 19px;
+    width: 50%;
+    box-shadow: 6px 6px 5px -6px rgba(0, 0, 0, 0.37);
+    -webkit-box-shadow: 6px 6px 5px -6px rgba(0, 0, 0, 0.37);
+    -moz-box-shadow: 6px 6px 5px -6px rgba(0, 0, 0, 0.37);
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 70%;
+      .inputItem {
+        display: flex;
+        justify-content: space-between;
+          color: themed("textColorSecond");
+
+        label {
+          flex: 1;
+          font-size: 20px;
+        }
+        input {
+          flex: 1;
+          padding: 10px;
+          border: 1px solid themed("border");
+          outline: none;
+          color: themed("textColorSecond");
+          background-color: themed("bgSoft");
+          
+          &:focus {
+            border: 1px solid #080880;
+          }
+        }
+        select {
+          flex: 1;
+          padding: 10px;
+          
+          border: 1px solid themed("border");
+          outline: none;
+          color: themed("textColorSecond");
+          background-color: themed("bgSoft");
+          &:focus {
+            border: 1px solid #080880;
+          }
+        }
+      }
+      button {
+        background-color: #008080;
+        padding: 10px;
+        color: #ffffff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 5px;
+          font-size: 20px;
+
+        &:hover {
+          background-color: #014d4d;
+        }
+      }
+    }
+  }
+}
+}

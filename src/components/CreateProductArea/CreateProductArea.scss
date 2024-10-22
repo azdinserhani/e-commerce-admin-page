@@ -1,0 +1,249 @@
+@import "../../App.scss";
+@include themify($themes) {
+  .createProductArea {
+    background-color: themed("bg");
+    border-radius: 19px;
+    height: 215px;
+    min-width: 500px;
+    flex: 1;
+    box-shadow: 6px 6px 5px -6px rgba(0, 0, 0, 0.37);
+    -webkit-box-shadow: 6px 6px 5px -6px rgba(0, 0, 0, 0.37);
+    -moz-box-shadow: 6px 6px 5px -6px rgba(0, 0, 0, 0.37);
+    padding: 20px;
+    .header {
+      display: flex;
+      align-items: center;
+      padding-bottom: 10px;
+      justify-content: space-between;
+      h3{
+        color: themed("textColorSecond");
+      }
+      button {
+        background-color: #008080;
+        padding: 10px;
+        color: #ffffff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+    }
+    .createArea {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+
+      .imageSelector {
+        flex: 1;
+        height: 300px;
+        margin: 10px;
+        border-radius: 10px;
+        border: 1.2px solid rgba(128, 128, 128, 0.267);
+        background-color: themed("bgSoft");
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        .imgSelect {
+          font-size: 60px;
+          cursor: pointer;
+          color: themed("textColorSoft");
+        }
+        input {
+          display: none;
+        }
+        .file{
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          cursor: pointer;
+          &:hover{
+            .delete{
+              opacity: 1;
+              scale: 1.1;
+            }
+          }
+          img{
+          object-fit: cover;
+
+            height: 100%;
+            width: 100%;
+          }
+          .delete{
+            position: absolute;
+            right :50%;
+            top: 50%;
+            transform: translate(50%,-50%);
+            background-color: #005757;
+            height: 50px;
+            width: 50px;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            opacity: 0;
+            transition: 0.5s ease all;
+          }
+        }
+      }
+      .variantArea {
+        flex: 3;
+        padding: 20px;
+
+        margin: 10px;
+        border-radius: 10px;
+        border: 1.2px solid rgba(128, 128, 128, 0.267);
+        .defaultVariant {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          align-items: center;
+          justify-content: center;
+          .inputItem {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            min-width: 400px;
+            height: 70px;
+            label{
+              color: themed("textColorSecond");
+              
+            }
+            input {
+              padding: 10px 10px;
+              border-radius: 5px;
+              outline: none;
+              border: 1px solid #008080;
+              background-color: themed("bgSoft");
+              color: themed("textColorSecond");
+            }
+          }
+        }
+        .description {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          label{
+              color: themed("textColorSecond");
+          }
+          textarea {
+            padding: 10px;
+            outline: none;
+            border: 1px solid #008080;
+            border-radius: 10px;
+            background-color: themed("bgSoft");
+              color: themed("textColorSecond");
+          }
+        }
+        .colorArea {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 100px;
+          label{
+              color: themed("textColorSecond");
+          }
+          .inputItem {
+            display: flex;
+            flex-direction: column;
+
+            height: auto;
+            gap: 5px;
+            .colorInput {
+              height: 30px;
+              width: 50px;
+            }
+            button {
+              width: 50px;
+              background-color: #008080;
+              padding: 10px;
+              color: #ffffff;
+              border: none;
+              outline: none;
+              cursor: pointer;
+              border-radius: 5px;
+            }
+          }
+          .colors {
+            display: flex;
+            gap: 10px;
+
+            .colorItem {
+              height: 50px;
+              width: 50px;
+              border-radius: 10px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              border: 1px solid black;
+
+              &:hover {
+                opacity: 0.9;
+                cursor: pointer;
+                .delete {
+                  transition: 1s ease all;
+                  opacity: 1;
+                  scale: 1.2;
+                }
+              }
+
+              .delete {
+                opacity: 0;
+                color: #008080;
+              }
+            }
+          }
+        }
+        h2 {
+          margin-top: 20px;
+          color: themed("textColorSoft");
+        }
+        .specialVariant {
+          margin-top: 10px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          align-items: center;
+          .inputItem {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            min-width: 400px;
+            height: 70px;
+            select {
+              width: 100%;
+              background-color: themed("bgSoft");
+              color: themed("textColorSecond");
+            }
+            label{
+              color: themed("textColorSecond");
+          }
+            input {
+              padding: 10px 10px;
+              border-radius: 5px;
+              outline: none;
+              border: 1px solid #008080;
+              background-color: themed("bgSoft");
+              color: themed("textColorSecond");
+            }
+          }
+        }
+        .createButton {
+              margin-top: 40px;
+              width: 50%;
+              background-color: #008080;
+              padding: 10px;
+              color: #ffffff;
+              border: none;
+              outline: none;
+              cursor: pointer;
+              border-radius: 5px;
+              &:hover{
+              background-color: #005757;
+              }
+            }
+      }
+    }
+  }
+}

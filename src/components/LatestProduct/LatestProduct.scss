@@ -1,0 +1,44 @@
+@import "../../App.scss";
+@include themify($themes) {
+  .latestProduct {
+    background-color: themed("bg");
+    border-radius: 19px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    box-shadow: 6px 6px 5px -6px rgba(0, 0, 0, 0.37);
+    -webkit-box-shadow: 6px 6px 5px -6px rgba(0, 0, 0, 0.37);
+    -moz-box-shadow: 6px 6px 5px -6px rgba(0, 0, 0, 0.37);
+    width: 50vh;
+    .head {
+      display: flex;
+      justify-content: space-between;
+      h3{
+        color: themed("textColorSecond");
+      }
+      span {
+        color: #008080;
+        cursor: pointer;
+      }
+    }
+    .card {
+      display: flex;
+      gap: 10px;
+      img {
+        height: 70px;
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        h2{
+          color: themed("textColorSecond");
+        }
+        span {
+          color: #008080;
+        }
+      }
+    }
+  }
+}

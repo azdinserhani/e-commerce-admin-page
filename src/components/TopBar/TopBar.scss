@@ -1,0 +1,44 @@
+@import "../../App.scss";
+  @include themify($themes) {
+
+  .topBar {
+    height: 50px;
+    background-color: themed("bgPrimary");
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    z-index: 5000;
+    .wrapper {
+      width: 1366px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0px 20px;
+      color: #fffff0;
+
+      .left {
+        h2 {
+          font-size: 20px;
+        }
+      }
+      .right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        h2 {
+          font-size: 20px;
+        }
+        .icon {
+          cursor: pointer;
+        }
+        img {
+          height: 40px;
+          width: 40px;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  }
